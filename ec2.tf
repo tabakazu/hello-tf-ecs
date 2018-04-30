@@ -1,5 +1,5 @@
 # ECS Instance
-resource "aws_instance" "1" {
+resource "aws_instance" "01" {
   ami                         = "ami-a99d8ad5"
   instance_type               = "t2.micro"
   subnet_id                   = "${aws_subnet.public-1a.id}"
@@ -14,7 +14,7 @@ echo ECS_CLUSTER=taba-cluster >> /etc/ecs/ecs.config
 EOF
 }
 
-resource "aws_instance" "2" {
+resource "aws_instance" "02" {
   ami                         = "ami-a99d8ad5"
   instance_type               = "t2.micro"
   subnet_id                   = "${aws_subnet.public-1c.id}"
